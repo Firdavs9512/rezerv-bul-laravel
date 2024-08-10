@@ -78,48 +78,50 @@ export function CafeInfoCard() {
                     </div>
                 </div>
 
-                {/* About,Menu,Reviews */}
-                <div className="flex items-center mt-5 text-base border-b border-slate-300/80">
-                    <a
-                        href="#about"
-                        className="px-6 py-2 font-semibold border-b-[4px] text-primary border-b-primary"
-                    >
-                        About
-                    </a>
+                <div>
+                    {/* About,Menu,Reviews */}
+                    <div className="sticky top-0 flex items-center mt-5 text-base border-b border-slate-300/80 bg-slate-100">
+                        <a
+                            href="#about"
+                            className="px-6 py-2 font-semibold border-b-[4px] text-primary border-b-primary"
+                        >
+                            About
+                        </a>
 
-                    <a
-                        href="#menu"
-                        className="px-6 py-2 font-semibold text-slate-700"
-                    >
-                        Menu
-                    </a>
+                        <a
+                            href="#menu"
+                            className="px-6 py-2 font-semibold text-slate-700"
+                        >
+                            Menu
+                        </a>
 
-                    <a
-                        href="#reviews"
-                        className="px-6 py-2 font-semibold text-slate-700"
-                    >
-                        Reviews
-                    </a>
+                        <a
+                            href="#reviews"
+                            className="px-6 py-2 font-semibold text-slate-700"
+                        >
+                            Reviews
+                        </a>
+                    </div>
+
+                    {/* About */}
+                    <div className="mt-5" id="about">
+                        <h3 className="text-xl font-semibold text-slate-800">
+                            About Cafe de Paris
+                        </h3>
+                        <p className="mt-2 text-slate-600">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Nullam sed purus auctor, ultricies quam sit
+                            amet, ultrices metus. Sed auctor, odio nec ultrices
+                            consectetur, nunc metus.
+                        </p>
+                    </div>
+
+                    {/* Menu */}
+                    <CafeInfoMenu />
+
+                    {/* Reviews */}
+                    <CafeReviews />
                 </div>
-
-                {/* About */}
-                <div className="mt-5" id="about">
-                    <h3 className="text-xl font-semibold text-slate-800">
-                        About Cafe de Paris
-                    </h3>
-                    <p className="mt-2 text-slate-600">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam sed purus auctor, ultricies quam sit amet,
-                        ultrices metus. Sed auctor, odio nec ultrices
-                        consectetur, nunc metus.
-                    </p>
-                </div>
-
-                {/* Menu */}
-                <CafeInfoMenu />
-
-                {/* Reviews */}
-                <CafeReviews />
 
                 {/* Asked Questions */}
                 <AskedQuestions />
