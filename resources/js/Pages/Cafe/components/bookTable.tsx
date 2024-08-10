@@ -317,8 +317,8 @@ const monthDays: MonthDay[] = [
 
 export function BookTable() {
     return (
-        <div className="col-span-4">
-            <div className="pb-6 mt-3 shadow-xl rounded-xl">
+        <div className="sticky col-span-4">
+            <div className="sticky pb-6 mt-3 shadow-xl top-2 rounded-xl">
                 <div className="w-full p-3 border-b bg-slate-200 rounded-t-xl border-slate-300">
                     <h4 className="text-xl font-semibold text-slate-800">
                         Find a table
