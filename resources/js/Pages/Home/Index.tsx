@@ -80,7 +80,7 @@ export default function HomePage() {
             </div>
 
             {/* Favori */}
-            <div className="w-full max-w-4xl mx-auto mb-10">
+            <div className="w-full max-w-5xl mx-auto mb-10">
                 <div className="flex items-center justify-between w-ful">
                     <h4>
                         <span className="text-2xl font-semibold text-secondary">
@@ -105,7 +105,7 @@ export default function HomePage() {
                             className="col-span-3 p-2 transition-all rounded hover:shadow-lg hover:bg-white hover:cursor-pointer"
                         >
                             <div className="mb-2">
-                                <img src={res1} alt="" className="h-28" />
+                                <img src={res1} alt="" className="h-36" />
                             </div>
                             <div className="grid items-center justify-between grid-cols-12">
                                 <h5 className="col-span-10 text-base font-bold">
@@ -120,7 +120,7 @@ export default function HomePage() {
                                     5th Avenue, New York
                                 </p>
                                 {item % 2 === 0 && (
-                                    <div className="inline-flex text-white bg-black py-0.5 px-1.5 rounded">
+                                    <div className="inline-flex font-semibold text-sm text-white bg-black py-0.5 px-1.5 rounded">
                                         Up to 50%
                                     </div>
                                 )}
@@ -131,7 +131,7 @@ export default function HomePage() {
             </div>
 
             {/* Popular */}
-            <div className="w-full max-w-4xl mx-auto mb-10">
+            <div className="w-full max-w-5xl mx-auto mb-10">
                 <div className="flex items-center justify-between w-ful">
                     <h4>
                         <span className="text-2xl font-semibold text-secondary">
@@ -156,7 +156,7 @@ export default function HomePage() {
                             className="col-span-3 p-2 transition-all rounded hover:shadow-lg hover:bg-white hover:cursor-pointer"
                         >
                             <div className="mb-2">
-                                <img src={res1} alt="" className="h-28" />
+                                <img src={res1} alt="" className="h-36" />
                             </div>
                             <div className="grid items-center justify-between grid-cols-12">
                                 <h5 className="col-span-10 text-base font-bold">
@@ -166,10 +166,15 @@ export default function HomePage() {
                                     9.8
                                 </p>
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-2 space-y-1">
                                 <p className="text-sm text-slate-600">
                                     5th Avenue, New York
                                 </p>
+                                {item % 2 === 0 && (
+                                    <div className="inline-flex font-semibold text-sm text-white bg-black py-0.5 px-1.5 rounded">
+                                        Up to 50%
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -177,7 +182,7 @@ export default function HomePage() {
             </div>
 
             {/* The Closest */}
-            <div className="w-full max-w-4xl mx-auto mb-10">
+            <div className="w-full max-w-5xl mx-auto mb-10">
                 <div className="flex items-center justify-between w-ful">
                     <h4>
                         <span className="text-2xl font-semibold text-secondary">
@@ -202,7 +207,7 @@ export default function HomePage() {
                             className="col-span-3 p-2 transition-all rounded hover:shadow-lg hover:bg-white hover:cursor-pointer"
                         >
                             <div className="mb-2">
-                                <img src={res1} alt="" className="h-28" />
+                                <img src={res1} alt="" className="h-36" />
                             </div>
                             <div className="grid items-center justify-between grid-cols-12">
                                 <h5 className="col-span-10 text-base font-bold">
@@ -212,10 +217,15 @@ export default function HomePage() {
                                     9.8
                                 </p>
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-2 space-y-1">
                                 <p className="text-sm text-slate-600">
                                     5th Avenue, New York
                                 </p>
+                                {item % 2 === 0 && (
+                                    <div className="inline-flex font-semibold text-sm text-white bg-black py-0.5 px-1.5 rounded">
+                                        Up to 50%
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -223,7 +233,7 @@ export default function HomePage() {
             </div>
 
             {/* How does it work */}
-            <div className="w-full max-w-4xl mx-auto mt-5 mb-10">
+            <div className="w-full max-w-5xl mx-auto mt-5 mb-10">
                 <h4 className="text-2xl font-semibold text-secondary">
                     How does it work?
                 </h4>
@@ -303,7 +313,7 @@ export default function HomePage() {
             </div>
 
             {/* Are you a restaurant owner? */}
-            <div className="w-full max-w-4xl mx-auto mt-5 mb-10">
+            <div className="w-full max-w-5xl mx-auto mt-5 mb-10">
                 <h4 className="text-2xl font-semibold text-secondary">
                     Are you a restaurant owner?
                 </h4>
@@ -349,7 +359,7 @@ export default function HomePage() {
 
             {/* Footer */}
             <footer className="w-full bg-black">
-                <div className="w-full max-w-4xl pt-10 mx-auto">
+                <div className="w-full max-w-5xl pt-10 mx-auto">
                     <div className="grid grid-cols-12 gap-4">
                         <div className="col-span-3">
                             <h5 className="text-lg font-semibold text-white">
@@ -395,7 +405,7 @@ export default function HomePage() {
                     </div>
                 </div>
 
-                <div className="w-full max-w-4xl mx-auto mt-10 text-sm border-t border-slate-800">
+                <div className="w-full max-w-5xl mx-auto mt-10 text-sm border-t border-slate-800">
                     <div className="flex items-center justify-between pt-3 pb-4 text-slate-400">
                         <p>© 2024 RezervBul. All rights reserved.</p>
                         <div className="flex items-center gap-x-4">

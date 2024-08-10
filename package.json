@@ -24,6 +24,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "lucide-react": "^0.426.0"
+        "lucide-react": "^0.426.0",
+        "tailwind-merge": "^2.4.0"
     }
 }
