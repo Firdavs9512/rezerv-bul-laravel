@@ -16,6 +16,7 @@ const restoranlar: RestoranCardInfo[] = [
         name: "Amerikan Cafe",
         rating: 9.8,
         upTo: 50,
+        url: "/show",
     },
     {
         image: res1,
@@ -23,6 +24,7 @@ const restoranlar: RestoranCardInfo[] = [
         name: "Italian Restaurant",
         rating: 8.5,
         upTo: 30,
+        url: "/show",
     },
     {
         image: res1,
@@ -30,6 +32,7 @@ const restoranlar: RestoranCardInfo[] = [
         name: "Italian Restaurant",
         rating: 8.5,
         upTo: 30,
+        url: "/show",
     },
     {
         image: res1,
@@ -37,6 +40,7 @@ const restoranlar: RestoranCardInfo[] = [
         name: "Italian Restaurant",
         rating: 8.5,
         upTo: 30,
+        url: "/show",
     },
 ];
 

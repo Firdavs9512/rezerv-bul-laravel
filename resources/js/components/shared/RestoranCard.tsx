@@ -6,6 +6,7 @@ export interface RestoranCardInfo {
     location: string;
     rating: number;
     image: string;
+    url?: string;
 }
 
 export function RestoranCard({
@@ -14,9 +15,13 @@ export function RestoranCard({
     name,
     rating,
     upTo = 0,
+    url = "#",
 }: RestoranCardInfo) {
     return (
-        <div className="col-span-3 p-2 transition-all rounded hover:shadow-lg hover:bg-white hover:cursor-pointer">
+        <Link
+            href={url}
+            className="col-span-3 p-2 transition-all rounded hover:shadow-lg hover:bg-white hover:cursor-pointer"
+        >
             <div className="mb-2">
                 <img src={image} alt={name} className="h-36" />
             </div>
@@ -34,7 +39,7 @@ export function RestoranCard({
                     </div>
                 )}
             </div>
-        </div>
+        </Link>
     );
 }
 
