@@ -6,31 +6,31 @@ import GuestLayout from "@/Layouts/GuestLayout";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { RestaurantOwner } from "@/components/templates/RestaurantOwner";
 import { CafeInfoCard } from "./components/infoCard";
+import { Restoran } from "@/types";
 
-const breadcrumbs: Breadcrumb[] = [
-    {
-        title: "Home",
-        url: "/",
-        isActive: false,
-    },
-    {
-        title: "Istanbul",
-        url: "/istanbul",
-        isActive: false,
-    },
-    {
-        title: "Cafe",
-        url: "/istanbul/cafe",
-        isActive: false,
-    },
-    {
-        title: "Cafe de Paris",
-        url: "/istanbul/cafe/cafe-de-paris",
-        isActive: true,
-    },
-];
+interface Props {
+    restaurant: Restoran;
+}
 
-export default function ShowPage() {
+export default function ShowPage({ restaurant }: Props) {
+    const breadcrumbs: Breadcrumb[] = [
+        {
+            title: "Home",
+            url: "/",
+            isActive: false,
+        },
+        {
+            title: restaurant.category.name,
+            url: `/category/${restaurant.category.slug}`,
+            isActive: false,
+        },
+        {
+            title: restaurant.name,
+            url: `/restoran/${restaurant.slug}`,
+            isActive: true,
+        },
+    ];
+
     return (
         <GuestLayout headerSearch topMenu>
             <Breadcrumb breadcrumbs={breadcrumbs} />
@@ -44,7 +44,7 @@ export default function ShowPage() {
             </div>
 
             {/* Information */}
-            <CafeInfoCard />
+            <CafeInfoCard {...restaurant} />
 
             {/* Are you a restaurant owner? */}
             <RestaurantOwner />

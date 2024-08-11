@@ -3,8 +3,15 @@ import { BookTable } from "./bookTable";
 import { CafeReviews } from "./reviews";
 import { AskedQuestions } from "./askedQuestions";
 import { CafeInfoMenu } from "./infoMenu";
+import { Restoran } from "@/types";
 
-export function CafeInfoCard() {
+export function CafeInfoCard({
+    address,
+    category,
+    description,
+    name,
+    rating,
+}: Restoran) {
     return (
         <div className="grid w-full max-w-5xl grid-cols-11 mx-auto">
             <div className="col-span-7 pr-5">
@@ -17,7 +24,7 @@ export function CafeInfoCard() {
                         <p>
                             <span>Istanbul</span>
                             <span className="mx-2">/</span>
-                            <span>Cafe</span>
+                            <span>{category.name}</span>
                         </p>
                     </div>
                     <div>
@@ -26,7 +33,7 @@ export function CafeInfoCard() {
                 </div>
 
                 <h1 className="text-3xl font-semibold text-slate-800">
-                    Cafe de Paris
+                    {name}
                 </h1>
 
                 {/* Address,category,price */}
@@ -37,9 +44,7 @@ export function CafeInfoCard() {
                                 <MapPin className="w-4 text-primary/60" />
                             </div>
                             <p className="text-slate-600">
-                                <span>
-                                    Istanbul, Turkey, Beyoglu, Istiklal Street
-                                </span>
+                                <span>{address}</span>
                             </p>
                         </div>
 
@@ -48,7 +53,7 @@ export function CafeInfoCard() {
                                 <Utensils className="w-4 text-primary/60" />
                             </div>
                             <p className="text-slate-600">
-                                <span>Cafe</span>
+                                <span>{category.name}</span>
                             </p>
                         </div>
 
@@ -68,7 +73,7 @@ export function CafeInfoCard() {
                                 className="inline-flex items-center justify-center w-8 h-8 text-base font-medium text-center rounded-md bg-primary-light text-primary"
                                 title="Online Reservation"
                             >
-                                8.9
+                                {rating.toFixed(1)}
                             </span>
 
                             <p className="text-xs text-slate-600">
@@ -106,14 +111,9 @@ export function CafeInfoCard() {
                     {/* About */}
                     <div className="mt-5" id="about">
                         <h3 className="text-xl font-semibold text-slate-800">
-                            About Cafe de Paris
+                            About {category.name} {name}
                         </h3>
-                        <p className="mt-2 text-slate-600">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nullam sed purus auctor, ultricies quam sit
-                            amet, ultrices metus. Sed auctor, odio nec ultrices
-                            consectetur, nunc metus.
-                        </p>
+                        <p className="mt-2 text-slate-600">{description}</p>
                     </div>
 
                     {/* Menu */}
