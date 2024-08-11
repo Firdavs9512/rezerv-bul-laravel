@@ -1,43 +1,28 @@
+import { Restoran } from "@/types";
 import { Link } from "@inertiajs/react";
 
-export interface RestoranCardInfo {
-    upTo?: number;
-    name: string;
-    location: string;
-    rating: number;
-    image: string;
-    url?: string;
-}
-
-export function RestoranCard({
-    image,
-    location,
-    name,
-    rating,
-    upTo = 0,
-    url = "#",
-}: RestoranCardInfo) {
+export function RestoranCard({ image, name, rating, address, slug }: Restoran) {
     return (
         <Link
-            href={url}
+            href={`/restoran/${slug}`}
             className="col-span-3 p-2 transition-all rounded hover:shadow-lg hover:bg-white hover:cursor-pointer"
         >
             <div className="mb-2">
-                <img src={image} alt={name} className="h-36" />
+                <img src={image} alt={name} className="w-full h-36" />
             </div>
             <div className="grid items-center justify-between grid-cols-12">
                 <h5 className="col-span-10 text-base font-bold">{name}</h5>
                 <p className="col-span-2 text-sm font-semibold text-slate-600 text-end">
-                    {rating}
+                    {rating.toFixed(1)}
                 </p>
             </div>
             <div className="mt-2 space-y-1">
-                <p className="text-sm text-slate-600">{location}</p>
-                {upTo > 0 && (
+                <p className="text-sm text-slate-600">{address}</p>
+                {/* {upTo > 0 && (
                     <div className="inline-flex font-semibold text-sm text-white bg-black py-0.5 px-1.5 rounded">
                         Up to {upTo}%
                     </div>
-                )}
+                )} */}
             </div>
         </Link>
     );

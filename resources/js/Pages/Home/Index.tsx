@@ -1,52 +1,29 @@
-import res1 from "@/assets/images/f35a7384-771e-4be5-a492-f13e4d8bf89e.jpg";
 import GuestLayout from "@/Layouts/GuestLayout";
 import { HomeHero } from "./components/hero";
 import {
     RestoranCard,
-    RestoranCardInfo,
     RestoranCardTitle,
 } from "@/components/shared/RestoranCard";
 import { HomeHowDoesItWork } from "./components/howDoesItWork";
 import { RestaurantOwner } from "@/components/templates/RestaurantOwner";
+import { Restoran } from "@/types";
+import { Head } from "@inertiajs/react";
 
-const restoranlar: RestoranCardInfo[] = [
-    {
-        image: res1,
-        location: "5th Avenue, New York",
-        name: "Amerikan Cafe",
-        rating: 9.8,
-        upTo: 50,
-        url: "/show",
-    },
-    {
-        image: res1,
-        location: "Times Square, New York",
-        name: "Italian Restaurant",
-        rating: 8.5,
-        upTo: 30,
-        url: "/show",
-    },
-    {
-        image: res1,
-        location: "Times Square, New York",
-        name: "Italian Restaurant",
-        rating: 8.5,
-        upTo: 30,
-        url: "/show",
-    },
-    {
-        image: res1,
-        location: "Times Square, New York",
-        name: "Italian Restaurant",
-        rating: 8.5,
-        upTo: 30,
-        url: "/show",
-    },
-];
+interface HomePageProps {
+    favorite: Restoran[];
+    popular: Restoran[];
+    closest: Restoran[];
+}
 
-export default function HomePage() {
+export default function HomePage({
+    closest,
+    favorite,
+    popular,
+}: HomePageProps) {
     return (
         <GuestLayout>
+            <Head title="Home" />
+
             {/* Hero */}
             <HomeHero />
 
@@ -55,7 +32,7 @@ export default function HomePage() {
                 <RestoranCardTitle title="Favori" />
 
                 <div className="grid grid-cols-12 gap-4 mt-5">
-                    {restoranlar.map((restoran, index) => (
+                    {favorite.map((restoran, index) => (
                         <RestoranCard key={index} {...restoran} />
                     ))}
                 </div>
@@ -66,10 +43,7 @@ export default function HomePage() {
                 <RestoranCardTitle title="Popular" />
 
                 <div className="grid grid-cols-12 gap-4 mt-5">
-                    {restoranlar.map((restoran, index) => (
-                        <RestoranCard key={index} {...restoran} />
-                    ))}
-                    {restoranlar.map((restoran, index) => (
+                    {popular.map((restoran, index) => (
                         <RestoranCard key={index} {...restoran} />
                     ))}
                 </div>
@@ -80,7 +54,7 @@ export default function HomePage() {
                 <RestoranCardTitle title="The Closest" />
 
                 <div className="grid grid-cols-12 gap-4 mt-5">
-                    {restoranlar.map((restoran, index) => (
+                    {closest.map((restoran, index) => (
                         <RestoranCard key={index} {...restoran} />
                     ))}
                 </div>
