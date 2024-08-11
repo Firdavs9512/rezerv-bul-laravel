@@ -12,12 +12,13 @@ export function Header({ headerSearch, headerSticky, topMenu }: HeaderProps) {
     return (
         <div
             className={cn(
-                "flex items-center justify-between w-full px-6 py-5 bg-white scroll-py-4",
-                !topMenu && "mt-5"
+                "flex items-center justify-between w-full px-6 py-5 bg-white scroll-py-4 shadow-md",
+                !topMenu && "mt-5",
+                headerSticky && "sticky top-0 z-50"
             )}
         >
             <div>
-                <Link href="#" className="text-3xl font-semibold text-primary">
+                <Link href="/" className="text-3xl font-semibold text-primary">
                     RezervBul
                 </Link>
             </div>

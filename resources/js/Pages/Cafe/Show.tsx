@@ -7,6 +7,7 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { RestaurantOwner } from "@/components/templates/RestaurantOwner";
 import { CafeInfoCard } from "./components/infoCard";
 import { Restoran } from "@/types";
+import { Head } from "@inertiajs/react";
 
 interface Props {
     restaurant: Restoran;
@@ -32,7 +33,8 @@ export default function ShowPage({ restaurant }: Props) {
     ];
 
     return (
-        <GuestLayout headerSearch topMenu>
+        <GuestLayout headerSearch topMenu headerSticky={false}>
+            <Head title={restaurant.name} />
             <Breadcrumb breadcrumbs={breadcrumbs} />
 
             {/* Image slider here */}
